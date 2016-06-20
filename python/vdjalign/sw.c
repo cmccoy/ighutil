@@ -311,7 +311,7 @@ static CYTHON_INLINE float __PYX_NAN() {
 #include "string.h"
 #include "stdlib.h"
 #include "stdint.h"
-#include "sw_align.h"
+//#include "sw_align.h"
 #include "ig_align.h"
 #ifdef _OPENMP
 #include <omp.h>
@@ -2189,7 +2189,7 @@ static PyObject *__pyx_pf_8vdjalign_2sw_2align(CYTHON_UNUSED PyObject *__pyx_sel
  *         align_reads(ref, qry, out, m, p, go, ge, threads, n_keep, md, rg, rg_id)             # <<<<<<<<<<<<<<
  * 
  */
-        align_reads(__pyx_v_ref, __pyx_v_qry, __pyx_v_out, __pyx_v_m, __pyx_v_p, __pyx_v_go, __pyx_v_ge, __pyx_v_threads, __pyx_v_n_keep, __pyx_v_md, __pyx_v_rg, __pyx_v_rg_id);
+//        align_reads(__pyx_v_ref, __pyx_v_qry, __pyx_v_out, __pyx_v_m, __pyx_v_p, __pyx_v_go, __pyx_v_ge, __pyx_v_threads, __pyx_v_n_keep, __pyx_v_md, __pyx_v_rg, __pyx_v_rg_id);
       }
 
       /* "vdjalign/sw.pyx":148
@@ -4070,3 +4070,4 @@ static CYTHON_INLINE size_t __Pyx_PyInt_AsSize_t(PyObject* x) {
 
 
 #endif /* Py_PYTHON_H */
+
