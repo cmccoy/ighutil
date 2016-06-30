@@ -1,6 +1,6 @@
 # distutils: language = c
 # distutils: include_dirs = src
-# distutils: sources = src/ksw.c src/sw_align.c src/ig_align.c src/kstring.c
+# distutils: sources = src/ksw.c src/ig_align.c src/kstring.c
 # distutils: extra_compile_args = -std=c99
 # distutils: extra_link_args = -lz
 from libc.stdlib cimport free, malloc
@@ -9,7 +9,7 @@ from libc.stdint cimport int32_t, uint8_t
 import re
 
 
-cdef extern from "sw_align.h":
+"""cdef extern from "sw_align.h":
     void align_reads(const char*,
                      const char*,
                      const char*,
@@ -22,7 +22,7 @@ cdef extern from "sw_align.h":
                      const int32_t,
                      const char*,
                      const char*) nogil
-
+"""
 cdef extern from "ig_align.h":
     void ig_align_reads(const char*,
                         const uint8_t,
@@ -145,6 +145,6 @@ def align(bytes ref_path,
     cdef int32_t m = match, p = mismatch, go = gap_open, ge = gap_extend, md = max_drop
     cdef uint8_t threads = n_threads
 
-    with nogil:
+"""    with nogil:
         align_reads(ref, qry, out, m, p, go, ge, threads, n_keep, md, rg, rg_id)
-
+"""
